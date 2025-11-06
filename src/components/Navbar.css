@@ -1,0 +1,77 @@
+.navbar {
+  background: #00665a;
+  padding: 10px 20px;
+  color: white;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  /* ✅ pushes left and right apart */
+  width: 100%;
+}
+
+/* LEFT SIDE */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  height: 40px;
+  width: 40px;
+}
+
+/* RIGHT SIDE MENU (Desktop) */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  margin-left: auto;       /* ✅ moves menu to right */
+  align-items: center;
+}
+
+/* MENU LINKS */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* HAMBURGER BUTTON (hidden on desktop) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/* ✅ MOBILE MODE */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 65px;
+    right: 10px;
+    background: #00665a;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 6px;
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
